@@ -2,7 +2,7 @@
 
 Name : Nakul Siwach
 Roll No. : MT2024096
-Program : b. Hard link 
+Program : 1b. Hard link 
 
 */
 

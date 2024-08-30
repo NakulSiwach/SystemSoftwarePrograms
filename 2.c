@@ -1,6 +1,19 @@
+/*
+
+Name : Nakul Siwach
+Roll No. : MT2024096
+Program : 2. infinite loop
+
+*/
+
+
 #include<stdio.h>
+#include<unistd.h>
 
 int main(){
-    printf("hi this is my commit from code");
-    return 0;
+	while(1){
+		printf("Running \n");
+		sleep(1);
+	}
+	return 0;
 }
