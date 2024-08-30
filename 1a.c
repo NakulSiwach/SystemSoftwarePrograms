@@ -11,22 +11,26 @@ Program :a. soft link
 
 int main(){
 
-	const char*t = "file1.txt";
-	const char*l = "file2.txt";
+	const char*OriginalFile = "file1.txt";
+	const char*SymlinkOriginalFile = "file2.txt";
 
-	if(symlink(t,l)!=0){
+	if(symlink(OriginalFile,SymlinkOriginalFile)!=0){
 		perror("error creating link");
 		return 1;
 	}
-	printf("Link generated: %s -> %s\n",l,t);
+	printf("Link generated: %s -> %s\n",SymlinkOriginalFile,OriginalFile);
 	return 0;
 
 }
 
+/*
+using shell command:-
+touch file1
+ln -s file1 file1sym
+*/
+
 
 /*
-
 ./a.out
-symlink: File exists
-
+Link generated: file2.txt -> file1.txt
 */

@@ -1,8 +1,8 @@
 /*
 
 Name : Nakul Siwach
-Roll no. : MT2024096
-Program :  1.b hard link
+Roll No. : MT2024096
+Program : b. Hard link 
 
 */
 
@@ -10,25 +10,26 @@ Program :  1.b hard link
 #include<unistd.h>
 
 int main(){
-  const char*lf="hlink.txt";
-	const char*t="h.txt";
 
+	const char*OriginalFile = "file1.txt";
+	const char*HardlinkOriginalFile = "file2.txt";
 
-	if(link(t,lf)!=0){
-		perror("link");
+	if(link(OriginalFile,HardlinkOriginalFile)!=0){
+		perror("error creating link");
 		return 1;
 	}
-	printf("Hard link is created: %s -> %s\n",lf,t);
-
-
+	printf("Link generated: %s -> %s\n",HardlinkOriginalFile,OriginalFile);
 	return 0;
+
 }
 
+/*
+using shell command:-
+ln file1 file1sym
+*/
 
 
 /*
-
 ./a.out
-link: File exists
-
+Link generated: file2.txt -> file1.txt
 */

@@ -7,16 +7,20 @@ Program : c. FIFO (mkfifo Library Function or mknod system call)
 */
 
 
+#include<stdio.h>
+#include<sys/types.h>
+#include<sys/stat.h>
+#include<fcntl.h>
 
-#include <stdio.h>
-#include <sys/stat.h>
+int main(){
+	const char*file="file1.txt";
 
-
-int main(int argc,char *argv[]){
-	int o=mkfifo(argv[1],S_IRWXU);
-	if(o==0){
-		printf("fifo special file created\n");
+	if(mknod(file,S_IFIFO | 0666,0) == -1){
+		perror("mknod");
+		return 1;
 	}
+
+	printf("FIFO file creted : %s\n", file);
 	return 0;
 }
 
