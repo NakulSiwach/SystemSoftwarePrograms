@@ -1,3 +1,4 @@
+
 /*
 
 Name : Nakul Siwach
@@ -12,7 +13,7 @@ parent processes. Check output of the file.
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-int main(int argc, char *argv[])
+int main()
 {
 
     fork();
