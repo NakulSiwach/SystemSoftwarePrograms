@@ -25,6 +25,7 @@ void main(){
     printf("Difference is : %llu\n", end - start);
 }
 
+// 4.3 GHZ max
 
 /*
 
